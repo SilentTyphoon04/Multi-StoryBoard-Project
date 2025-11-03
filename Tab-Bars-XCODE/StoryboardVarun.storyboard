@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24128" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="41e-bN-Zm2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24127" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="41e-bN-Zm2">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24063"/>
@@ -8,27 +8,64 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Explore Page-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="VarunViewController" customModule="Tab_Bars_XCODE" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="lp1-AR-0d2">
+                                <rect key="frame" x="20" y="252" width="353" height="233"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What do you want to explore?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SZP-nh-Ro0">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="49.666666666666664"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="27"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your interest" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z0Q-HI-vCB">
+                                        <rect key="frame" x="0.0" y="91.666666666666686" width="353" height="49.666666666666657"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vYL-rd-0Oj">
+                                        <rect key="frame" x="0.0" y="183.33333333333331" width="353" height="49.666666666666657"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="GDA-XO-FvU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="lp1-AR-0d2" secondAttribute="bottom" constant="250" id="U2j-qp-bDG"/>
+                            <constraint firstItem="lp1-AR-0d2" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="Usy-rr-DSW"/>
+                            <constraint firstItem="lp1-AR-0d2" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="80" id="m04-aw-yRz"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="lp1-AR-0d2" secondAttribute="trailing" constant="20" id="tVP-wM-pvZ"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="eTY-kJ-uaG"/>
+                    <navigationItem key="navigationItem" title="Explore Page" id="a98-Ma-yHH"/>
+                    <connections>
+                        <outlet property="enterbutton" destination="vYL-rd-0Oj" id="er6-yY-MR8"/>
+                        <outlet property="interestfield" destination="z0Q-HI-vCB" id="oyH-db-nMc"/>
+                        <outlet property="label" destination="SZP-nh-Ro0" id="ccj-oq-RCW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1066.4122137404579" y="91.549295774647888"/>
         </scene>
-        <!--Varun-->
+        <!--Explore-->
         <scene sceneID="ZBF-df-rgj">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="41e-bN-Zm2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Varun" image="person.fill.turn.down" catalog="system" id="FPl-48-RSX"/>
+                    <tabBarItem key="tabBarItem" title="Explore" image="location.magnifyingglass" catalog="system" id="FPl-48-RSX"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ChD-V7-AVf">
@@ -46,7 +83,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="person.fill.turn.down" catalog="system" width="128" height="120"/>
+        <image name="location.magnifyingglass" catalog="system" width="128" height="117"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
