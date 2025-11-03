@@ -65,7 +65,7 @@
         <scene sceneID="ZBF-df-rgj">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="41e-bN-Zm2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Explore" image="magnifyingglass.circle.fill" catalog="system" id="FPl-48-RSX"/>
+                    <tabBarItem key="tabBarItem" title="Explore" image="location.magnifyingglass" catalog="system" id="FPl-48-RSX"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ChD-V7-AVf">
@@ -83,7 +83,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="magnifyingglass.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="location.magnifyingglass" catalog="system" width="128" height="117"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
