@@ -8,17 +8,53 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--View Controller Yatish-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="ViewControllerYatish" customModule="Tab_Bars_XCODE" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="121" translatesAutoresizingMaskIntoConstraints="NO" id="URK-O9-qdl">
+                                <rect key="frame" x="20" y="208" width="353" height="345"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8K-YB-kSk">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="34.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="51f-9a-Yhg">
+                                        <rect key="frame" x="0.0" y="155.33333333333331" width="353" height="34.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhx-t0-vbV">
+                                        <rect key="frame" x="0.0" y="310.66666666666663" width="353" height="34.333333333333314"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                        <connections>
+                                            <action selector="button:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="J5O-WO-geX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="URK-O9-qdl" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="36" id="DEZ-0a-jZq"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="URK-O9-qdl" secondAttribute="trailing" constant="20" id="Fqi-ko-H02"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="URK-O9-qdl" secondAttribute="bottom" constant="182" id="fXC-wZ-1b9"/>
+                            <constraint firstItem="URK-O9-qdl" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="o7C-nq-TCm"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="BsI-3k-cvJ"/>
+                    <connections>
+                        <outlet property="label" destination="a8K-YB-kSk" id="Uiv-es-NIk"/>
+                        <outlet property="textField" destination="51f-9a-Yhg" id="tNK-cJ-JSb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
